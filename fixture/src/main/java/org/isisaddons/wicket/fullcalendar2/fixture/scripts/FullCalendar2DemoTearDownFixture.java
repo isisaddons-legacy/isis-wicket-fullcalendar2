@@ -19,11 +19,11 @@ package org.isisaddons.wicket.fullcalendar2.fixture.scripts;
 import org.apache.isis.applib.fixturescripts.FixtureScript;
 import org.apache.isis.applib.services.jdosupport.IsisJdoSupport;
 
-public class FullCalendar2WicketTearDownFixture extends FixtureScript {
+public class FullCalendar2DemoTearDownFixture extends FixtureScript {
 
     private final String ownedBy;
 
-    public FullCalendar2WicketTearDownFixture(final String ownedBy) {
+    public FullCalendar2DemoTearDownFixture(final String ownedBy) {
         this.ownedBy = ownedBy;
     }
 

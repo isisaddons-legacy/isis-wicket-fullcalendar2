@@ -19,21 +19,21 @@ package org.isisaddons.wicket.fullcalendar2.fixture.scripts;
 import org.isisaddons.wicket.fullcalendar2.fixture.scripts.todo.ToDoItemsFixture;
 import org.apache.isis.applib.fixturescripts.DiscoverableFixtureScript;
 
-public class FullCalendar2WicketSetUpFixture extends DiscoverableFixtureScript {
+public class FullCalendar2DemoSetUpFixture extends DiscoverableFixtureScript {
 
     private final String ownedBy;
 
-    public FullCalendar2WicketSetUpFixture() {
+    public FullCalendar2DemoSetUpFixture() {
         this(null);
     }
 
-    public FullCalendar2WicketSetUpFixture(String ownedBy) {
+    public FullCalendar2DemoSetUpFixture(String ownedBy) {
         this.ownedBy = ownedBy;
     }
 
     @Override
     public void execute(ExecutionContext executionContext) {
-        execute(new FullCalendar2WicketTearDownFixture(ownedBy), executionContext);
+        execute(new FullCalendar2DemoTearDownFixture(ownedBy), executionContext);
         execute(new ToDoItemsFixture(), executionContext);
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-Copyright 2013~2014 Dan Haywood
+Copyright 2013~2017 Dan Haywood
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. 
@@ -24,25 +24,10 @@ language governing permissions and limitations under the License.
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>isis-wicket-fullcalendar2-fixture</artifactId>
-    <name>Isis Addons FullCalendar2 Wicket Cpt Fixtures</name>
+    <artifactId>isis-wicket-fullcalendar2-app</artifactId>
+    <name>Isis Addons Fullcalendar2 Wicket Cpt Application</name>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <filtering>false</filtering>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>com.github.odavid.maven.plugins</groupId>
@@ -59,14 +44,6 @@ language governing permissions and limitations under the License.
                             <groupId>com.danhaywood.mavenmixin</groupId>
                             <artifactId>enforcerrelaxed</artifactId>
                         </mixin>
-                        <mixin>
-                            <groupId>com.danhaywood.mavenmixin</groupId>
-                            <artifactId>datanucleusenhance</artifactId>
-                        </mixin>
-                        <mixin>
-                            <groupId>com.danhaywood.mavenmixin</groupId>
-                            <artifactId>surefire</artifactId>
-                        </mixin>
                     </mixins>
                 </configuration>
             </plugin>
@@ -81,28 +58,9 @@ language governing permissions and limitations under the License.
 
         <dependency>
             <groupId>org.isisaddons.wicket.fullcalendar2</groupId>
-            <artifactId>isis-wicket-fullcalendar2-cpt</artifactId>
+            <artifactId>isis-wicket-fullcalendar2-fixture</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-unittestsupport</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Bytecode libraries (for mocking) -->
-        <dependency>
-            <groupId>org.objenesis</groupId>
-            <artifactId>objenesis</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
 </project>
